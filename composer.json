@@ -1,12 +1,12 @@
 {
     "name": "cedricziel/amznprofilesapiphp",
-    "description": "An API client",
+    "description": "An API client for Amazon Advertising profiles",
     "type": "library",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "cedricziel\\amznprofilesapiphp\\": "src/",
-            "cedricziel\\amznprofilesapiphp\\Generated\\": "generated/"
+            "CedricZiel\\AmznAdvertisingProfilesApi\\": "src/",
+            "CedricZiel\\AmznAdvertisingProfilesApi\\Generated\\": "generated/"
         }
     },
     "authors": [
