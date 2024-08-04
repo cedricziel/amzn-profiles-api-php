@@ -2,6 +2,8 @@ name: Generate API client
 
 on:
   push:
+    branches:
+      - main
   pull_request:
 
 permissions:
@@ -21,7 +23,7 @@ jobs:
 
   build:
     name: Generate Client
-    needs: 
+    needs:
       - lint
 
     runs-on: ubuntu-latest
@@ -48,12 +50,15 @@ jobs:
 
     - name: Install dependencies
       run: composer install --prefer-dist --no-progress
-    
+
     - name: Generate API client
       run: php vendor/bin/jane-openapi generate
-    
+
     - name: Run php-cs-fixer
       uses: docker://oskarstark/php-cs-fixer-ga
+
+    - name: Generate README
+      run: php .regen-docs.php
 
     - uses: stefanzweifel/git-auto-commit-action@v5
       with:
