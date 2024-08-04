@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/cedricziel/amzn-profiles-api-php/compare/v1.0.0...v1.1.0) (2024-08-04)
+
+
+### Features
+
+* wrap and document client ([#4](https://github.com/cedricziel/amzn-profiles-api-php/issues/4)) ([8921a35](https://github.com/cedricziel/amzn-profiles-api-php/commit/8921a351ae2c3b4efc8a5506a2b7a2c83c87b2dd))
+
 ## 1.0.0 (2024-08-04)
 
 
