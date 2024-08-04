@@ -1,8 +1,8 @@
 <?php
 
 return [
-    'openapi-file' => __DIR__ . '/openapi.json',
-    'namespace' => 'cedricziel\amznprofilesapiphp\Generated',
+    'openapi-file' => __DIR__ . '/openapi.yaml',
+    'namespace' => 'CedricZiel\AmznAdvertisingProfilesApi\Generated',
     'directory' => __DIR__ . '/generated',
     'use-fixer' => true,
 ];

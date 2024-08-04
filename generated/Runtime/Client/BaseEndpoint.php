@@ -8,7 +8,7 @@ declare(strict_types=1);
  * Do no edit it directly.
  */
 
-namespace myvendor\mynamespace\Generated\Runtime\Client;
+namespace CedricZiel\AmznAdvertisingProfilesApi\Generated\Runtime\Client;
 
 use Http\Message\MultipartStream\MultipartStreamBuilder;
 use Psr\Http\Message\ResponseInterface;

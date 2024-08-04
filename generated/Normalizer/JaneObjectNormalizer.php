@@ -8,10 +8,10 @@ declare(strict_types=1);
  * Do no edit it directly.
  */
 
-namespace myvendor\mynamespace\Generated\Normalizer;
+namespace CedricZiel\AmznAdvertisingProfilesApi\Generated\Normalizer;
 
-use myvendor\mynamespace\Generated\Runtime\Normalizer\CheckArray;
-use myvendor\mynamespace\Generated\Runtime\Normalizer\ValidatorTrait;
+use CedricZiel\AmznAdvertisingProfilesApi\Generated\Runtime\Normalizer\CheckArray;
+use CedricZiel\AmznAdvertisingProfilesApi\Generated\Runtime\Normalizer\ValidatorTrait;
 use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -28,11 +28,13 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         use CheckArray;
         use ValidatorTrait;
         protected $normalizers = [
-            \myvendor\mynamespace\Generated\Model\Pet::class => PetNormalizer::class,
+            \CedricZiel\AmznAdvertisingProfilesApi\Generated\Model\AccountInfo::class => AccountInfoNormalizer::class,
 
-            \myvendor\mynamespace\Generated\Model\Error::class => ErrorNormalizer::class,
+            \CedricZiel\AmznAdvertisingProfilesApi\Generated\Model\Profile::class => ProfileNormalizer::class,
 
-            \Jane\Component\JsonSchemaRuntime\Reference::class => \myvendor\mynamespace\Generated\Runtime\Normalizer\ReferenceNormalizer::class,
+            \CedricZiel\AmznAdvertisingProfilesApi\Generated\Model\ProfileResponse::class => ProfileResponseNormalizer::class,
+
+            \Jane\Component\JsonSchemaRuntime\Reference::class => \CedricZiel\AmznAdvertisingProfilesApi\Generated\Runtime\Normalizer\ReferenceNormalizer::class,
         ];
         protected $normalizersCache = [];
 
@@ -79,7 +81,12 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
 
         public function getSupportedTypes(?string $format = null): array
         {
-            return [\myvendor\mynamespace\Generated\Model\Pet::class => false, \myvendor\mynamespace\Generated\Model\Error::class => false, \Jane\Component\JsonSchemaRuntime\Reference::class => false];
+            return [
+                \CedricZiel\AmznAdvertisingProfilesApi\Generated\Model\AccountInfo::class => false,
+                \CedricZiel\AmznAdvertisingProfilesApi\Generated\Model\Profile::class => false,
+                \CedricZiel\AmznAdvertisingProfilesApi\Generated\Model\ProfileResponse::class => false,
+                \Jane\Component\JsonSchemaRuntime\Reference::class => false,
+            ];
         }
     }
 } else {
@@ -90,11 +97,13 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         use CheckArray;
         use ValidatorTrait;
         protected $normalizers = [
-            \myvendor\mynamespace\Generated\Model\Pet::class => PetNormalizer::class,
+            \CedricZiel\AmznAdvertisingProfilesApi\Generated\Model\AccountInfo::class => AccountInfoNormalizer::class,
 
-            \myvendor\mynamespace\Generated\Model\Error::class => ErrorNormalizer::class,
+            \CedricZiel\AmznAdvertisingProfilesApi\Generated\Model\Profile::class => ProfileNormalizer::class,
 
-            \Jane\Component\JsonSchemaRuntime\Reference::class => \myvendor\mynamespace\Generated\Runtime\Normalizer\ReferenceNormalizer::class,
+            \CedricZiel\AmznAdvertisingProfilesApi\Generated\Model\ProfileResponse::class => ProfileResponseNormalizer::class,
+
+            \Jane\Component\JsonSchemaRuntime\Reference::class => \CedricZiel\AmznAdvertisingProfilesApi\Generated\Runtime\Normalizer\ReferenceNormalizer::class,
         ];
         protected $normalizersCache = [];
 
@@ -144,7 +153,12 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
 
         public function getSupportedTypes(?string $format = null): array
         {
-            return [\myvendor\mynamespace\Generated\Model\Pet::class => false, \myvendor\mynamespace\Generated\Model\Error::class => false, \Jane\Component\JsonSchemaRuntime\Reference::class => false];
+            return [
+                \CedricZiel\AmznAdvertisingProfilesApi\Generated\Model\AccountInfo::class => false,
+                \CedricZiel\AmznAdvertisingProfilesApi\Generated\Model\Profile::class => false,
+                \CedricZiel\AmznAdvertisingProfilesApi\Generated\Model\ProfileResponse::class => false,
+                \Jane\Component\JsonSchemaRuntime\Reference::class => false,
+            ];
         }
     }
 }
