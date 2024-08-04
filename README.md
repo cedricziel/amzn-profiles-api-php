@@ -45,6 +45,7 @@ $clientId = '...';
 $client = AdvertisingProfilesClient::createFor(Endpoint::Europe, $accessToken);
 $client->listProfiles([], [Header::AmazonAdvertisingApiClientId->value => $clientId]);
 ```
+
 ### updateProfiles - put /v2/profiles
 
 Update the daily budget for one or more profiles.
@@ -61,6 +62,7 @@ $clientId = '...';
 $client = AdvertisingProfilesClient::createFor(Endpoint::Europe, $accessToken);
 $client->updateProfiles([], [Header::AmazonAdvertisingApiClientId->value => $clientId]);
 ```
+
 ### getProfileById - get /v2/profiles/{profileId}
 
 Gets a profile specified by identifier.
@@ -77,6 +79,7 @@ $clientId = '...';
 $client = AdvertisingProfilesClient::createFor(Endpoint::Europe, $accessToken);
 $client->getProfileById([], [Header::AmazonAdvertisingApiClientId->value => $clientId]);
 ```
+
 
 
 ## License

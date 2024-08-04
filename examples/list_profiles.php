@@ -1,8 +1,8 @@
 <?php
 
 // see above how to create a client
-use CedricZiel\AmznAdvertisingProfilesApi\Endpoint;
 use CedricZiel\AmznAdvertisingProfilesApi\AdvertisingProfilesClient;
+use CedricZiel\AmznAdvertisingProfilesApi\Endpoint;
 use CedricZiel\AmznAdvertisingProfilesApi\Header;
 
 $clientId = '...';
