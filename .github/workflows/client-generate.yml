@@ -1,0 +1,66 @@
+name: Generate API client
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lint:
+     runs-on: ubuntu-latest
+     steps:
+     - uses: actions/checkout@v4
+     - run: npm i -g @redocly/cli@latest
+     - run: redocly lint openapi.json
+
+  build:
+    name: Generate Client
+    needs: 
+      - lint
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Setup PHP with PECL extension
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '8.3'
+
+    - name: Validate composer.json and composer.lock
+      run: composer validate --strict
+
+    - name: Cache Composer packages
+      id: composer-cache
+      uses: actions/cache@v4
+      with:
+        path: vendor
+        key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-php-
+
+    - name: Install dependencies
+      run: composer install --prefer-dist --no-progress
+    
+    - name: Generate API client
+      run: php vendor/bin/jane-openapi generate
+    
+    - name: Run php-cs-fixer
+      uses: docker://oskarstark/php-cs-fixer-ga
+
+    - uses: stefanzweifel/git-auto-commit-action@v5
+      with:
+        commit_message: Apply php-cs-fixer changes
+
+    # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
+    # Docs: https://getcomposer.org/doc/articles/scripts.md
+
+    # - name: Run test suite
+    #   run: composer run-script test
