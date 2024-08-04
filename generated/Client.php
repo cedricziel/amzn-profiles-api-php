@@ -8,44 +8,68 @@ declare(strict_types=1);
  * Do no edit it directly.
  */
 
-namespace myvendor\mynamespace\Generated;
+namespace CedricZiel\AmznAdvertisingProfilesApi\Generated;
 
 class Client extends Runtime\Client\Client
 {
     /**
+     * Note that this operation does not return a response unless the current account has created at least one campaign using the advertising console.
+     *
      * @param array $queryParameters {
      *
-     * @var int $limit How many items to return at one time (max 100)
-     *          }
+     * @var string $apiProgram Filters response to include profiles that have permissions for the specified Advertising API program only. Setting `apiProgram=billing` filters the response to include only profiles to which the user and application associated with the access token have permission to view or edit billing information.
+     * @var string $accessLevel Filters response to include profiles that have specified permissions for the specified Advertising API program only. Currently, the only supported access level is `view` and `edit`. Setting `accessLevel=view` filters the response to include only profiles to which the user and application associated with the access token have view permission to the provided api program.
+     * @var string $profileTypeFilter Filters response to include profiles that are of the specified types in the comma-delimited list. Default is all types. Note that this filter performs an inclusive AND operation on the types.
+     * @var string $validPaymentMethodFilter Filter response to include profiles that have valid payment methods. Default is to include all profiles. Setting this filter to `true` returns only profiles with either no `validPaymentMethod` field, or the `validPaymentMethod` field set to `true`.  Setting this to `false` returns profiles with the `validPaymentMethod` field set to `false` only.
+     *             }
+     *
+     * @param array $headerParameters {
+     *
+     * @var string $Amazon-Advertising-API-ClientId The identifier of a client associated with a "Login with Amazon" account.
+     *             }
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \myvendor\mynamespace\Generated\Model\Pet[]|\myvendor\mynamespace\Generated\Model\Error|\Psr\Http\Message\ResponseInterface|null
+     * @return \CedricZiel\AmznAdvertisingProfilesApi\Generated\Model\Profile[]|\Psr\Http\Message\ResponseInterface|null
      */
-    public function listPets(array $queryParameters = [], string $fetch = self::FETCH_OBJECT)
+    public function listProfiles(array $queryParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new Endpoint\ListPets($queryParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\ListProfiles($queryParameters, $headerParameters), $fetch);
     }
 
     /**
+     * Note that this operation is only used for Sellers using Sponsored Products. This operation is not enabled for vendor type accounts.
+     *
+     * @param \CedricZiel\AmznAdvertisingProfilesApi\Generated\Model\Profile[]|null $requestBody
+     * @param array                                                                 $headerParameters {
+     *
+     * @var string $Amazon-Advertising-API-ClientId The identifier of a client associated with a "Login with Amazon" account.
+     *             }
+     *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return Model\Error|\Psr\Http\Message\ResponseInterface|null
+     * @return \CedricZiel\AmznAdvertisingProfilesApi\Generated\Model\ProfileResponse[]|\Psr\Http\Message\ResponseInterface|null
      */
-    public function createPets(Model\Pet $requestBody, string $fetch = self::FETCH_OBJECT)
+    public function updateProfiles(?array $requestBody = null, array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new Endpoint\CreatePets($requestBody), $fetch);
+        return $this->executeEndpoint(new Endpoint\UpdateProfiles($requestBody, $headerParameters), $fetch);
     }
 
     /**
-     * @param string $petId The id of the pet to retrieve
+     * This operation does not return a response unless the current account has created at least one campaign using the advertising console.
+     *
+     * @param array $headerParameters {
+     *
+     * @var string $Amazon-Advertising-API-ClientId The identifier of a client associated with a "Login with Amazon" account.
+     *             }
+     *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return Model\Pet|Model\Error|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\Profile|\Psr\Http\Message\ResponseInterface|null
      */
-    public function showPetById(string $petId, string $fetch = self::FETCH_OBJECT)
+    public function getProfileById(int $profileId, array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new Endpoint\ShowPetById($petId), $fetch);
+        return $this->executeEndpoint(new Endpoint\GetProfileById($profileId, $headerParameters), $fetch);
     }
 
     public static function create($httpClient = null, array $additionalPlugins = [], array $additionalNormalizers = [])
@@ -53,9 +77,8 @@ class Client extends Runtime\Client\Client
         if (null === $httpClient) {
             $httpClient = \Http\Discovery\Psr18ClientDiscovery::find();
             $plugins = [];
-            $uri = \Http\Discovery\Psr17FactoryDiscovery::findUriFactory()->createUri('http://petstore.swagger.io/v1');
+            $uri = \Http\Discovery\Psr17FactoryDiscovery::findUriFactory()->createUri('https://advertising-api.amazon.com (North America)');
             $plugins[] = new \Http\Client\Common\Plugin\AddHostPlugin($uri);
-            $plugins[] = new \Http\Client\Common\Plugin\AddPathPlugin($uri);
             if (count($additionalPlugins) > 0) {
                 $plugins = array_merge($plugins, $additionalPlugins);
             }

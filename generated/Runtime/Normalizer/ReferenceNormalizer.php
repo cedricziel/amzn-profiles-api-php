@@ -8,7 +8,7 @@ declare(strict_types=1);
  * Do no edit it directly.
  */
 
-namespace myvendor\mynamespace\Generated\Runtime\Normalizer;
+namespace CedricZiel\AmznAdvertisingProfilesApi\Generated\Runtime\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
 use Symfony\Component\HttpKernel\Kernel;
