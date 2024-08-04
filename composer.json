@@ -1,18 +1,18 @@
 {
-    "name": "myvendor/mynamespace",
+    "name": "cedricziel/amznprofilesapiphp",
     "description": "An API client",
     "type": "library",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "myvendor\\mynamespace\\": "src/",
-            "myvendor\\mynamespace\\Generated\\": "generated/"
+            "cedricziel\\amznprofilesapiphp\\": "src/",
+            "cedricziel\\amznprofilesapiphp\\Generated\\": "generated/"
         }
     },
     "authors": [
         {
-            "name": "Cedric Ziel",
-            "email": "cedric@cedric-ziel.com"
+            "name": "cedricziel",
+            "email": "mail@example.com"
         }
     ],
     "require-dev": {
