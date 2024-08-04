@@ -1,5 +1,18 @@
 # Changelog
 
+## 1.0.0 (2024-08-04)
+
+
+### Features
+
+* create spec ([#1](https://github.com/cedricziel/amzn-profiles-api-php/issues/1)) ([e2fbb96](https://github.com/cedricziel/amzn-profiles-api-php/commit/e2fbb9694b98c3931f6d017d2f1e161f05981255))
+
+
+### Bug Fixes
+
+* lint yaml ([7a5e3cf](https://github.com/cedricziel/amzn-profiles-api-php/commit/7a5e3cf081e2e317c1a2988f017bcc5d9fa172a4))
+* set namespace correctly ([#2](https://github.com/cedricziel/amzn-profiles-api-php/issues/2)) ([4376189](https://github.com/cedricziel/amzn-profiles-api-php/commit/437618952ea8416748c69a28ddb9e1cb49ad1bed))
+
 ## [1.0.1](https://github.com/cedricziel/php-openapi-client-template/compare/v1.0.0...v1.0.1) (2024-07-14)
 
 
