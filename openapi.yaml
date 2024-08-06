@@ -136,11 +136,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Profile'       
-servers:
-  - url: 'https://advertising-api.amazon.com (North America)'
-  - url: 'https://advertising-api-eu.amazon.com (Europe)'
-  - url: 'https://advertising-api-fe.amazon.com (Far East)'
+                $ref: '#/components/schemas/Profile'
 components:
   schemas:
     AccountType:
