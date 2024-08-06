@@ -5,6 +5,7 @@ namespace CedricZiel\AmznAdvertisingProfilesApi;
 use CedricZiel\AmznAdvertisingProfilesApi\Generated\Authentication\BearerAuthAuthentication;
 use CedricZiel\AmznAdvertisingProfilesApi\Generated\Client;
 use Http\Client\Common\Plugin\AddHostPlugin;
+use Http\Client\Common\PluginClient;
 use Jane\Component\OpenApiRuntime\Client\Plugin\AuthenticationRegistry;
 use Nyholm\Psr7\Uri;
 
