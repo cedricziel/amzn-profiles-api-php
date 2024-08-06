@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.2](https://github.com/cedricziel/amzn-profiles-api-php/compare/v1.1.1...v1.1.2) (2024-08-06)
+
+
+### Bug Fixes
+
+* remove pre-set servers to allow AddHostPlugin ([#8](https://github.com/cedricziel/amzn-profiles-api-php/issues/8)) ([4ac07aa](https://github.com/cedricziel/amzn-profiles-api-php/commit/4ac07aa32f266862afbd5f1758274faa6b2d2d78))
+
 ## [1.1.1](https://github.com/cedricziel/amzn-profiles-api-php/compare/v1.1.0...v1.1.1) (2024-08-06)
 
 
