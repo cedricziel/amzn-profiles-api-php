@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/cedricziel/amzn-profiles-api-php/compare/v1.1.0...v1.1.1) (2024-08-06)
+
+
+### Bug Fixes
+
+* use authentication plugin correctly ([#6](https://github.com/cedricziel/amzn-profiles-api-php/issues/6)) ([ae92e21](https://github.com/cedricziel/amzn-profiles-api-php/commit/ae92e21a420e8da0b30909b25e3822df5d1d4c6c))
+
 ## [1.1.0](https://github.com/cedricziel/amzn-profiles-api-php/compare/v1.0.0...v1.1.0) (2024-08-04)
 
 
