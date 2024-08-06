@@ -19,7 +19,7 @@ class AdvertisingProfilesClient extends Client
             new AddHostPlugin(new Uri($endpoint->value)),
         ];
 
-        if ($httpClient !== null) {
+        if (null !== $httpClient) {
             return parent::create(new PluginClient($httpClient, $plugins));
         }
 
