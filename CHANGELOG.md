@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.3](https://github.com/cedricziel/amzn-profiles-api-php/compare/v1.1.2...v1.1.3) (2024-08-06)
+
+
+### Bug Fixes
+
+* correctly supply custom client with plugins ([#10](https://github.com/cedricziel/amzn-profiles-api-php/issues/10)) ([72b08ca](https://github.com/cedricziel/amzn-profiles-api-php/commit/72b08ca5281aaefad282f6a0cd9f6b921c4a505a))
+
 ## [1.1.2](https://github.com/cedricziel/amzn-profiles-api-php/compare/v1.1.1...v1.1.2) (2024-08-06)
 
 
