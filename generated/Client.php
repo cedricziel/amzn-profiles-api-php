@@ -77,8 +77,6 @@ class Client extends Runtime\Client\Client
         if (null === $httpClient) {
             $httpClient = \Http\Discovery\Psr18ClientDiscovery::find();
             $plugins = [];
-            $uri = \Http\Discovery\Psr17FactoryDiscovery::findUriFactory()->createUri('https://advertising-api.amazon.com (North America)');
-            $plugins[] = new \Http\Client\Common\Plugin\AddHostPlugin($uri);
             if (count($additionalPlugins) > 0) {
                 $plugins = array_merge($plugins, $additionalPlugins);
             }
