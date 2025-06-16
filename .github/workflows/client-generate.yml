@@ -60,7 +60,7 @@ jobs:
     - name: Generate README
       run: php .regen-docs.php
 
-    - uses: stefanzweifel/git-auto-commit-action@v5
+    - uses: stefanzweifel/git-auto-commit-action@v6
       with:
         commit_message: Apply php-cs-fixer changes
 
