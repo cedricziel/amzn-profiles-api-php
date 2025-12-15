@@ -30,7 +30,7 @@ class Client extends Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \CedricZiel\AmznAdvertisingProfilesApi\Generated\Model\Profile[]|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\Profile[]|\Psr\Http\Message\ResponseInterface|null
      */
     public function listProfiles(array $queryParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
@@ -40,15 +40,15 @@ class Client extends Runtime\Client\Client
     /**
      * Note that this operation is only used for Sellers using Sponsored Products. This operation is not enabled for vendor type accounts.
      *
-     * @param \CedricZiel\AmznAdvertisingProfilesApi\Generated\Model\Profile[]|null $requestBody
-     * @param array                                                                 $headerParameters {
+     * @param Model\Profile[]|null $requestBody
+     * @param array                $headerParameters {
      *
      * @var string $Amazon-Advertising-API-ClientId The identifier of a client associated with a "Login with Amazon" account.
      *             }
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \CedricZiel\AmznAdvertisingProfilesApi\Generated\Model\ProfileResponse[]|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\ProfileResponse[]|\Psr\Http\Message\ResponseInterface|null
      */
     public function updateProfiles(?array $requestBody = null, array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
